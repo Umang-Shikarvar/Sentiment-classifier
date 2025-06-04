@@ -1,8 +1,6 @@
 # Sentiment Classifier with QLoRA (4-bit GPT-Neo)
 
-This model is a **QLoRA fine-tuned** version of [`EleutherAI/gpt-neo-1.3B`](https://huggingface.co/EleutherAI/gpt-neo-1.3B) for **sentiment classification** (Positive, Negative, Neutral) on the [`tweet_eval/sentiment`](https://huggingface.co/datasets/cardiffnlp/tweet_eval/viewer/sentiment) dataset.
-
-It uses **4-bit quantization** via **`bitsandbytes`** and fine-tunes using **QLoRA (PEFT)**, enabling efficient training and inference even on low-resource hardware.
+This project presents a lightweight and efficient sentiment classifier built by fine-tuning the [`EleutherAI/gpt-neo-1.3B`](https://huggingface.co/EleutherAI/gpt-neo-1.3B) language model using **QLoRA (Quantized Low-Rank Adaptation)** with **4-bit quantization**. Trained on the [`tweet_eval/sentiment`](https://huggingface.co/datasets/cardiffnlp/tweet_eval/viewer/sentiment) dataset, the model classifies tweets into Positive, Negative, or Neutral sentiments. It leverages a prompt-based generation approach with output constrained to a fixed set of sentiment tokens using a custom LogitsProcessor, enabling fast and deterministic inference even on low-resource hardware. This makes it ideal for real-time sentiment analysis applications in resource-constrained environments.
 
 ---
 
